@@ -15,8 +15,18 @@ jobs:
     steps:
       - checkout
       - run:
+          name: 'Install pnpm'
+          command: |
+            curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - run:
+          name: Check current version of pnpm
+          command: pnpm -v
+      - run:
           name: 'Say hello'
           command: 'echo Hello, World!'
+      - run:
+          name: 'install deps'
+          command: 'pnpm install'
       - run:
           name: 'Danger'
           command: 'pnpm exec danger ci'
