@@ -1,3 +1,4 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
     browser: true,
@@ -6,6 +7,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,4 +23,12 @@ module.exports = {
   ],
   rules: {
   },
+  overrides: [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        'import/no-extraneous-dependencies': 'off',
+      }
+    }
+  ]
 };
