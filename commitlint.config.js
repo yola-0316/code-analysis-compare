@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
+  ignores: [(commit) => commit.includes('[skip:commitlint]')],
   rules: {
     'type-case': [2, 'always', 'pascal-case'],
     'type-enum': [
