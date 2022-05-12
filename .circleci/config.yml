@@ -18,6 +18,7 @@ jobs:
           name: 'Install pnpm'
           command: |
             curl -fsSL https://get.pnpm.io/install.sh | sh -
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
       - run:
           name: Check current version of pnpm
           command: pnpm -v
