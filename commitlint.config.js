@@ -1,3 +1,4 @@
+/** @type {import('@commitlint/types').UserConfig} */
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   ignores: [(commit) => commit.includes('[skip:commitlint]')],
@@ -28,4 +29,6 @@ module.exports = {
       ],
     ],
   },
+  helpUrl:
+    'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
 };
