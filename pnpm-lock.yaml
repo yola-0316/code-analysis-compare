@@ -14,6 +14,7 @@ specifiers:
   eslint-plugin-jsx-a11y: ^6.5.1
   eslint-plugin-react: ^7.28.0
   eslint-plugin-react-hooks: ^4.3.0
+  husky: ^8.0.1
   prettier: ^2.6.2
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -38,6 +39,7 @@ devDependencies:
   eslint-plugin-jsx-a11y: 6.5.1_eslint@8.15.0
   eslint-plugin-react: 7.29.4_eslint@8.15.0
   eslint-plugin-react-hooks: 4.5.0_eslint@8.15.0
+  husky: 8.0.1
   prettier: 2.6.2
   typescript: 4.6.4
   vite: 2.9.9
@@ -1948,6 +1950,12 @@ packages:
 
   /humps/2.0.1:
     resolution: {integrity: sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=}
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /hyperlinker/1.0.0:
