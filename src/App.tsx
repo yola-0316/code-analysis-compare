@@ -12,23 +12,9 @@ function App() {
   return (
     <div className="container mx-auto">
       <header>
-        <h1 className="text-3xl font-bold underline hover:text-blue-500 my-4">
+        <h1 className="text-3xl font-bold underline text-blue-500 hover:text-blue-400 my-4">
           <Link to="/">Code Analysis Tools Compare</Link>
         </h1>
-        <nav className="flex gap-x-4">
-          <Link className="hover:text-blue-500 underline" to="/sonarsource">
-            sonar source
-          </Link>
-          <Link className="hover:text-blue-500 underline" to="/danger">
-            danger systems
-          </Link>
-          <Link className="hover:text-blue-500 underline" to="/embold">
-            embold
-          </Link>
-          <Link className="hover:text-blue-500 underline" to="/synk">
-            synk
-          </Link>
-        </nav>
       </header>
       <main>
         <Routes>
