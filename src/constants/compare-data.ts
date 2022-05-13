@@ -2,8 +2,8 @@ const dataSource = [
   {
     path: '/sonarsource',
     name: 'Sonar Cloud',
-    languageSupport: 'Java, JavaScript, TypeScript',
-    ideEditorIntegration: 'Yes',
+    languageSupport: 'More than 17 languages',
+    ideEditorIntegration: 'Sonar Lint',
     features: '',
     pros: '',
     cons: '',
@@ -13,8 +13,8 @@ const dataSource = [
   {
     path: '/sonarsource',
     name: 'Sonar Qube',
-    languageSupport: 'Java, JavaScript, TypeScript',
-    ideEditorIntegration: 'Yes',
+    languageSupport: 'More than 17 languages',
+    ideEditorIntegration: 'Sonar Lint',
     features: '',
     pros: '',
     cons: '',
