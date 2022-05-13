@@ -15,8 +15,22 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: 'Install pnpm'
+          command: |
+            curl -fsSL https://get.pnpm.io/install.sh | sh -
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
+      - run:
+          name: Check current version of pnpm
+          command: pnpm -v
+      - run:
+          name: 'Say hello'
+          command: 'echo Hello, World!'
+      - run:
+          name: 'install deps'
+          command: 'pnpm install'
+      - run:
+          name: 'Danger'
+          command: 'pnpm exec danger ci'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
