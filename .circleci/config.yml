@@ -21,7 +21,9 @@ jobs:
             export PATH=/home/circleci/.local/share/pnpm/:$PATH
       - run:
           name: Check current version of pnpm
-          command: pnpm -v
+          command: |
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
+            pnpm -v
       - run:
           name: 'Say hello'
           command: 'echo Hello, World!'
