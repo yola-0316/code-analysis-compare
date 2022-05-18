@@ -9,7 +9,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:16.13.0
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -18,19 +18,24 @@ jobs:
           name: 'Install pnpm'
           command: |
             curl -fsSL https://get.pnpm.io/install.sh | sh -
-            export PATH=/home/circleci/.local/share/pnpm/:$PATH
       - run:
           name: Check current version of pnpm
-          command: pnpm -v
+          command: |
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
+            pnpm -v
       - run:
           name: 'Say hello'
           command: 'echo Hello, World!'
       - run:
           name: 'install deps'
-          command: 'pnpm install'
+          command: |
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
+            pnpm install
       - run:
           name: 'Danger'
-          command: 'pnpm exec danger ci'
+          command: |
+            export PATH=/home/circleci/.local/share/pnpm/:$PATH
+            pnpm exec danger ci
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
