@@ -32,10 +32,6 @@ jobs:
             export PATH=/home/circleci/.local/share/pnpm/:$PATH
             pnpm install
       - run:
-          name: 'get changed files'
-          command: |
-            echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})"
-      - run:
           name: 'Danger'
           command: |
             export PATH=/home/circleci/.local/share/pnpm/:$PATH
